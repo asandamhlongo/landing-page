@@ -50,3 +50,66 @@ a {
     letter-spacing: 0.5px;
     padding: 0 6px;
 }
+a:before {
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: all 0.3s ease;
+}
+
+a:hover:before {
+    width: 100%;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1rem;
+    min-height: calc(100vh - 100px);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+}
+
+.content-container h1 {
+    font-size: 50px;
+    font-weight: 200;
+    line-height: 3.5rem;
+    color: navy;
+    margin-bottom: 1rem;
+    padding-top: 200px;
+
+}
+
+p {
+    font-size: 18px;
+    color: black;
+    padding-top: 10px;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+button {
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+    padding: 10px;
+    padding-top: 7px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 12px;
+    border-color: blue;
+    background-color: blue;
+    color: #fff;
+}
+
+button:hover {
+    background-color: #fff;
+    color: blue;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
